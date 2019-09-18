@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class multiples
+{
+    // Prints multiples of user-specified numbers to the user-specified limit
+
+    public static void main(String[] args)
+    {
+      final int Per_Line = 5;
+      int value, limit, mult, count = 0;
+
+      Scanner keyboard = new Scanner(System.in);
+
+      System.out.println("Enter a positive value: ");
+      value = keyboard.nextInt();
+
+      System.out.println("Enter an upper limit: ");
+      limit = keyboard.nextInt();
+
+      System.out.println();
+      System.out.println("The multiples of " + value + " between " + value
+                         + " and " + limit + " (inclusive) are:");
+
+      for (mult = value; mult <= limit; mult += value)
+      {
+          System.out.println(mult + "\t");
+          // Print a specific number of values per line of output
+          count++;
+
+          if (count % Per_Line == 0)
+          {
+              System.out.println();
+          }// end of if statement
+      }// end of for loop
+
+    }// end of main method
+}// end of class
