@@ -1,0 +1,20 @@
+public class basicArray {
+     final static int Limit = 15;
+     final static int Mult = 10;
+     // makes an array fills it changes it and then prints it out
+     public static void main(String args[]) {
+         
+         int[] list = new int[Limit];
+         // initialize the array values
+         for(int index = 0; index < Limit; index++)
+         {
+             list[index] = index * Mult;
+         }
+         list[5] = 999; // change one array value
+         for (int index = 0; index < Limit; index++)
+         {
+             System.out.print(list[index] + " ");
+         }
+          System.out.println();
+    }// end of main method
+}// end of basicArray class
